@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 2px solid purple;
+            margin: 100px auto;
+            border-radius: 10px;
+        }
+        .box1{
+            width: 400px;
+            height: 50px;
+            margin: 10px auto;
+            border-radius: 10px;
+           
+        }
+        .log{
+            width: 100px;
+            height: 30px;
+            margin: 10px 40px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.8;
+            background-color: #0d0da7a4;
+           
+        }
+        .up{
+            background-color: green;
+        }
+
+        .pu{
+            background-color: white;
+            color: red;
+            display: none;
+        }
+        .in p,.up p{
+            border-radius: 10px;
+          height: 300px;
+          width: 250px;
+          line-height: 2;
+          margin: 60px auto;
+          text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="log in"  id="loginBtn">log in</div>
+            <div class="log up"  id="signupBtn">sign up</div>
+        </div>
+        <div class="in"  id="loginSection">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cupiditate cumque dicta illum, harum laborum assumenda quos, quam temporibus ipsum rerum alias commodi rem ea quidem sapiente repellat quasi nesciunt</p>
+        </div>
+        <div class="up pu"  id="signupSection">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, pariatur expedita aspernatur ex velit molestias dolor error, cumque nemo officia placeat, voluptatem assumenda atque laudantium alias omnis nisi quae inventore!</p>
+        </div>
+    </div>
+
+    <script>
+        // document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const loginSection = document.getElementById('loginSection');
+            const signupSection = document.getElementById('signupSection');
+
+            loginBtn.addEventListener('click', function() {
+                loginSection.style.display = 'block';
+                signupSection.style.display = 'none';
+            });
+
+            signupBtn.addEventListener('click', function() {
+                signupSection.style.display = 'block';
+                loginSection.style.display = 'none';
+            });
+       // });
+    </script>
+</body>
+</html>

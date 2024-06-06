@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+    <header>
+        <div id="page-banner">
+            <h1 class="title">Bookorama</h1>
+            <p>book for ninja's</p>
+            <form class="search-books">
+              <input type="text" id="search" placeholder="Search books.....">
+            </form>
+        </div>
+    </header>
+       
+    <div id="book-list">
+        <h2 class="title">Books to Read</h2>
+        <ul type="none">
+        <li>
+            <span class="name">Name of the Wind</span>
+            <span class="delete">Delete</span>
+        </li>
+        <li>
+            <span class="name">In the name of the lord</span>
+            <span class="delete">Delete</span>
+        </li>
+        <li>
+            <span class="name">House we go</span>
+            <span class="delete">Delete</span>
+        </li>
+        <li>
+            <span class="name">Mother where is food</span>
+            <span class="delete">Delete</span>
+        </li>
+      </ul>
+    </div>
+    <form id="add-book">
+        <input type="checkbox" id="hide">
+        <label for="hide">Hide all books</label>
+        <div class="search">
+              <input type="text" id="Add" placeholder="Add a book...."  value="harry porter">
+        <button type="button">Add</button>
+        </div>
+      
+    </form>
+    <div class="nav">
+        <div class="nav-box">
+            <div data-target="#about" class="about active">about</div>
+            <div data-target="#contact" class="about">contact</div>
+        </div>
+        <div class="content">
+            <div class="contact-b active" id="about">
+                <h2> About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod facere nihil deleniti repellat. Necessitatibus assumenda nobis consectetur cumque, tenetur officiis provident sint. Consequatur, nobis. Dolores, consequatur? Numquam blanditiis voluptatum quod.........</p>
+            </div>
+            <div class="contact-b" id="contact">
+                <h2> Contact Us</h2>
+                <p>Ipsum dolor sit amet consectetur adipisicing elit. Repellendus maiores ad consectetur ipsum, omnis facilis voluptatum! Perferendis voluptas odio molestias, soluta dolorum iure veniam quo optio eius enim officiis minima..........</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

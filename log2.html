@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content Example</title>
+    <style>
+        .box {
+            width: 500px;
+            height: auto;
+            border: 2px solid purple;
+            margin: 100px auto;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .box1 {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .log {
+            width: 100px;
+            height: 30px;
+            border: 1px solid purple;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.8;
+            cursor: pointer;
+        }
+        ul#tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+        ul#tabs li {
+            margin-right: 20px;
+            padding: 10px;
+            background-color: #ddd;
+        }
+        ul#tabs li.active {
+            background-color: #bbb;
+        }
+        .panel {
+            display: none;
+        }
+        .panel.active {
+            display: block;
+        }
+        .in p, .up p {
+            border-radius: 10px;
+            height: auto;
+            width: auto;
+            border: 1px solid purple;
+            line-height: 2;
+            margin: 20px 0;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <ul id="tabs">
+                <li data-target="#loginSection" class="active">Log In</li>
+                <li data-target="#signupSection">Sign Up</li>
+            </ul>
+        </div>
+        <div class="panel active" id="loginSection">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cupiditate cumque dicta illum, harum laborum assumenda quos, quam temporibus ipsum rerum alias commodi rem ea quidem sapiente repellat quasi nesciunt</p>
+        </div>
+        <div class="panel" id="signupSection">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, pariatur expedita aspernatur ex velit molestias dolor error, cumque nemo officia placeat, voluptatem assumenda atque laudantium alias omnis nisi quae inventore!</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=> {
+            const tabs = document.querySelector('#tabs');
+            const panels = document.querySelectorAll('.panel');
+
+            tabs.addEventListener('click', function(e) {
+                if (e.target.tagName === 'LI') {
+                    const targetPanel = document.querySelector(e.target.dataset.target);
+
+                    tabs.querySelectorAll('li').forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+
+                    panels.forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+
+                    e.target.classList.add('active');
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
